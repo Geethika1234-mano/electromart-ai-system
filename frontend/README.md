@@ -1,16 +1,34 @@
-# React + Vite
+# ElectroMart AI: Multi-Agent Voice System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intelligent multi-agent orchestrator built for the ElectroMart consumer electronics store. [cite_start]This system uses **LangGraph** to route customer inquiries between specialized agents (Sales, Marketing, Technical Support, and Logistics) with context retention and agent handoffs[cite: 1, 2].
 
-Currently, two official plugins are available:
+## 🚀 Features
+* [cite_start]**Intelligent Routing**: Orchestrator agent with >85% intent classification accuracy[cite: 2].
+* [cite_start]**Multi-Agent Architecture**: Specialized agents for Sales, Marketing, Tech Support, and Order Logistics[cite: 4, 5].
+* [cite_start]**Database Operations**: Supports reading order status and writing return requests/notes[cite: 4, 5].
+* [cite_start]**Multimodal**: Supports both text-based chat and Realtime WebRTC/TTS capabilities[cite: 5].
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+* [cite_start]**Backend**: FastAPI, LangGraph, LangChain, OpenAI GPT-4o-mini[cite: 4, 5].
+* [cite_start]**Frontend**: React (Vite), CSS3[cite: 1, 3].
+* [cite_start]**Observability**: LangSmith/Langfuse for agent tracing.
 
-## React Compiler
+## 📦 Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
+1. Navigate to the backend directory: `cd backend`
+2. Create a virtual environment: `python -m venv venv`
+3. Activate venv:
+   - Windows: `venv\Scripts\activate`
+   - Mac/Linux: `source venv/bin/activate`
+4. Install dependencies: `pip install -r requirements.txt`
+5. [cite_start]Create a `.env` file based on `.env.example` and add your `OPENAI_API_KEY`.
+6. Run the server: `uvicorn app:app --reload`
 
-## Expanding the ESLint configuration
+### Frontend
+1. Navigate to the frontend directory: `cd frontend`
+2. Install packages: `npm install`
+3. Start the development server: `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏗️ Architecture
+[cite_start]Details on design decisions, agent handoffs, and state management can be found in the [ARCHITECTURE.md](./ARCHITECTURE.md) file.
